@@ -1,1 +1,233 @@
-this is a part from html introduction on how to understand it
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>HTML Introduction - Pro Codex</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f5f7fa;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* Header */
+
+.header {
+  background: #ffffff;
+  padding: 25px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.header h1 {
+  margin: 0;
+  font-weight: 600;
+}
+
+/* Container */
+
+.container {
+  padding: 30px;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Introduction Box */
+
+.intro-box {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+  animation: fadeIn 0.8s ease;
+}
+
+.intro-box h2 {
+  margin-top: 0;
+}
+
+/* Dropdown */
+
+.dropdown {
+  margin-top: 20px;
+  border-bottom: 1px solid #eee;
+  padding: 15px 0;
+}
+
+.dropdown-title {
+  cursor: pointer;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dropdown-title:hover {
+  color: #4a7cff;
+}
+
+.bullet {
+  transition: transform 0.3s ease;
+}
+
+.dropdown-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  padding-left: 25px;
+}
+
+.dropdown.active .dropdown-content {
+  max-height: 300px;
+  margin-top: 10px;
+}
+
+.dropdown.active .bullet {
+  transform: rotate(90deg);
+}
+
+/* Animation */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+<h1>HTML Introduction</h1>
+</div>
+
+<div class="container">
+
+<div class="intro-box">
+
+<h2>Welcome to HTML</h2>
+
+<p>
+HTML is the foundation of all websites. It helps you create structure, content,
+and layout for web pages.
+</p>
+
+<!-- Dropdown 1 -->
+
+<div class="dropdown">
+<div class="dropdown-title">
+<span class="bullet">▶</span>
+What is HTML?
+</div>
+
+<div class="dropdown-content">
+<p>
+HTML stands for HyperText Markup Language. It is used to create
+the structure of websites using elements and tags.
+</p>
+</div>
+</div>
+
+<!-- Dropdown 2 -->
+
+<div class="dropdown">
+<div class="dropdown-title">
+<span class="bullet">▶</span>
+Why Learn HTML?
+</div>
+
+<div class="dropdown-content">
+<ul>
+<li>Create your own websites</li>
+<li>Start web development</li>
+<li>Understand how websites work</li>
+<li>Build projects and portfolios</li>
+</ul>
+</div>
+</div>
+
+<!-- Dropdown 3 -->
+
+<div class="dropdown">
+<div class="dropdown-title">
+<span class="bullet">▶</span>
+What Can HTML Do?
+</div>
+
+<div class="dropdown-content">
+<ul>
+<li>Create headings and paragraphs</li>
+<li>Add images and videos</li>
+<li>Create links and buttons</li>
+<li>Build page layouts</li>
+</ul>
+</div>
+</div>
+
+<!-- Dropdown 4 -->
+
+<div class="dropdown">
+<div class="dropdown-title">
+<span class="bullet">▶</span>
+How Does HTML Work?
+</div>
+
+<div class="dropdown-content">
+<p>
+HTML uses tags to define content. Web browsers read these tags
+and display them as a webpage that users can see and interact with.
+</p>
+</div>
+</div>
+
+<!-- Dropdown 5 -->
+
+<div class="dropdown">
+<div class="dropdown-title">
+<span class="bullet">▶</span>
+Is HTML a Programming Language?
+</div>
+
+<div class="dropdown-content">
+<p>
+HTML is not a programming language. It is a markup language used
+to structure content. Programming languages like JavaScript add
+logic and functionality to websites.
+</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+const dropdowns = document.querySelectorAll(".dropdown");
+
+dropdowns.forEach(drop => {
+  drop.addEventListener("click", () => {
+    drop.classList.toggle("active");
+  });
+});
+
+</script>
+
+</body>
+</html>
