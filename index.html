@@ -127,6 +127,169 @@ left: -20px;
 
 .right {
 right: -20px;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Pro-Codex Learner Platform</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+body {
+font-family: 'Inter', sans-serif;
+background: #f5f7fa;
+margin: 0;
+padding: 0;
+color: #333;
+}
+
+/* Header */
+
+.header {
+text-align: center;
+padding: 40px 20px;
+}
+
+.header h1 {
+margin: 0;
+font-size: 32px;
+font-weight: 600;
+}
+
+.header p {
+margin-top: 10px;
+color: #666;
+}
+
+/* Container */
+
+.main-container {
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 40px 20px;
+}
+
+/* Carousel */
+
+.carousel-container {
+position: relative;
+width: 100%;
+max-width: 900px;
+overflow: hidden;
+margin: auto;
+}
+
+/* Cards */
+
+.carousel {
+display: flex;
+transition: transform 0.4s ease-in-out;
+}
+
+.card {
+min-width: 100%;
+background: white;
+border-radius: 12px;
+box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+padding: 40px;
+text-align: center;
+}
+
+.card img {
+width: 120px;
+height: 120px;
+object-fit: contain;
+margin-bottom: 20px;
+}
+
+.card h2 {
+margin-bottom: 10px;
+}
+
+.card p {
+color: #666;
+margin-bottom: 20px;
+}
+
+/* Learn Button */
+
+.learn-btn {
+padding: 12px 25px;
+background: #4a7cff;
+color: white;
+border: none;
+border-radius: 6px;
+cursor: pointer;
+font-weight: 500;
+transition: 0.2s ease;
+}
+
+.learn-btn:hover {
+background: #355edb;
+}
+
+/* Navigation Buttons */
+
+.nav-btn {
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+background: white;
+border: none;
+padding: 10px 14px;
+border-radius: 50%;
+cursor: pointer;
+box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+font-size: 18px;
+z-index: 10;
+}
+
+.nav-btn:hover {
+background: #f0f0f0;
+}
+
+.left {
+left: 10px;
+}
+
+.right {
+right: 10px;
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 480px) {
+
+.header h1 {
+font-size: 22px;
+}
+
+.main-container {
+padding: 20px 10px;
+}
+
+.card {
+padding: 25px 20px;
+}
+
+.card img {
+width: 90px;
+height: 90px;
+}
+
+.learn-btn {
+width: 100%;
+}
+
+.nav-btn {
+display: none;
+}
+
 }
 
 </style>
@@ -218,6 +381,31 @@ update();
 function goTo(page) {
 window.location.href = page;
 }
+
+/* Swipe Support */
+
+let startX = 0;
+let endX = 0;
+
+carousel.addEventListener("touchstart", (e) => {
+startX = e.touches[0].clientX;
+});
+
+carousel.addEventListener("touchmove", (e) => {
+endX = e.touches[0].clientX;
+});
+
+carousel.addEventListener("touchend", () => {
+
+if(startX - endX > 50) {
+next();
+}
+
+if(endX - startX > 50) {
+prev();
+}
+
+});
 
 </script>
 
