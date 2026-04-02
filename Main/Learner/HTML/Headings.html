@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>HTML Headings</title>
+
+<style>
+
+body{
+font-family: Arial, sans-serif;
+background: #0f172a;
+color: white;
+margin:0;
+padding:20px;
+}
+
+.container{
+max-width:350px;
+margin:auto;
+}
+
+.title{
+font-size:22px;
+font-weight:bold;
+margin-bottom:10px;
+}
+
+.code-box{
+background:#020617;
+padding:15px;
+border-radius:10px;
+margin-top:15px;
+font-family: monospace;
+overflow:auto;
+animation: fadeIn 0.6s ease;
+}
+
+.output-box{
+background:white;
+color:black;
+padding:15px;
+border-radius:10px;
+margin-top:15px;
+min-height:80px;
+animation: slideUp 0.6s ease;
+}
+
+button{
+margin-top:15px;
+padding:10px;
+border:none;
+background:#3b82f6;
+color:white;
+border-radius:8px;
+cursor:pointer;
+}
+
+.navigation{
+display:flex;
+justify-content:space-between;
+margin-top:25px;
+}
+
+.nav-btn{
+padding:10px 20px;
+background:#1e293b;
+border-radius:8px;
+}
+
+/* Animation */
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(10px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@keyframes slideUp{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="title">HTML Headings</div>
+
+<p>HTML headings are used for titles and subtitles.</p>
+
+<p>There are 6 heading tags:</p>
+
+<div class="code-box">
+
+&lt;h1&gt;Heading 1&lt;/h1&gt;
+&lt;h2&gt;Heading 2&lt;/h2&gt;
+&lt;h3&gt;Heading 3&lt;/h3&gt;
+&lt;h4&gt;Heading 4&lt;/h4&gt;
+&lt;h5&gt;Heading 5&lt;/h5&gt;
+&lt;h6&gt;Heading 6&lt;/h6&gt;
+
+</div>
+
+<button onclick="runCode()">Run Code</button>
+
+<div class="output-box" id="output">
+Output will appear here...
+</div>
+
+<!-- Navigation -->
+
+<div class="navigation">
+
+<button class="nav-btn" onclick="prevPage()">Prev</button>
+
+<button class="nav-btn" onclick="nextPage()">Next</button>
+
+</div>
+
+</div>
+
+<script>
+
+function runCode(){
+
+const output = document.getElementById("output");
+
+output.innerHTML = `
+<h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<h4>Heading 4</h4>
+<h5>Heading 5</h5>
+<h6>Heading 6</h6>
+`;
+
+output.style.animation = "none";
+output.offsetHeight;
+output.style.animation = "slideUp 0.6s ease";
+
+}
+
+function prevPage(){
+
+window.location.href = "BasicTags.html";
+
+}
+
+function nextPage(){
+
+window.location.href = "Paragraphs.html";
+
+}
+
+</script>
+
+</body>
+</html>
