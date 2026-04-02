@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>HTML Tables</title>
+
+<style>
+
+body{
+font-family: Arial, sans-serif;
+background:#f5f7fa;
+margin:0;
+padding:0;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+}
+
+.container{
+background:white;
+width:90%;
+max-width:800px;
+padding:25px;
+border-radius:12px;
+box-shadow:0 4px 15px rgba(0,0,0,0.08);
+animation:fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+h1{
+text-align:center;
+margin-bottom:10px;
+}
+
+.code-box{
+background:#1e1e1e;
+color:#fff;
+padding:15px;
+border-radius:8px;
+overflow:auto;
+margin:15px 0;
+}
+
+.output-box{
+border:2px solid #eee;
+padding:15px;
+border-radius:8px;
+margin-top:10px;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:10px;
+}
+
+th, td{
+border:1px solid #ddd;
+padding:8px;
+text-align:center;
+}
+
+th{
+background:#4CAF50;
+color:white;
+}
+
+.buttons{
+display:flex;
+justify-content:space-between;
+margin-top:20px;
+}
+
+button{
+padding:10px 20px;
+border:none;
+border-radius:8px;
+background:#4CAF50;
+color:white;
+cursor:pointer;
+font-size:16px;
+}
+
+button:hover{
+background:#45a049;
+}
+
+@media(max-width:350px){
+
+.container{
+padding:15px;
+}
+
+button{
+font-size:14px;
+padding:8px 12px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>HTML Tables</h1>
+
+<p>HTML tables are used to display data in rows and columns.</p>
+
+<h3>Example Code</h3>
+
+<div class="code-box">
+&lt;table&gt;<br>
+&nbsp;&nbsp;&lt;tr&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Name&lt;/th&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Age&lt;/th&gt;<br>
+&nbsp;&nbsp;&lt;/tr&gt;<br>
+&nbsp;&nbsp;&lt;tr&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;John&lt;/td&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;20&lt;/td&gt;<br>
+&nbsp;&nbsp;&lt;/tr&gt;<br>
+&lt;/table&gt;
+</div>
+
+<h3>Output</h3>
+
+<div class="output-box">
+
+<table>
+<tr>
+<th>Name</th>
+<th>Age</th>
+</tr>
+
+<tr>
+<td>John</td>
+<td>20</td>
+</tr>
+
+<tr>
+<td>Anna</td>
+<td>22</td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="buttons">
+
+<button onclick="location.href='Lists.html'">⬅ Previous</button>
+
+<button onclick="location.href='Forms.html'">Next ➡</button>
+
+</div>
+
+</div>
+
+</body>
+</html>
