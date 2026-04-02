@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>HTML Lists</title>
+
+<style>
+
+body{
+font-family: Arial, sans-serif;
+background: #0f172a;
+color: white;
+margin:0;
+padding:20px;
+}
+
+.container{
+max-width:350px;
+margin:auto;
+}
+
+.title{
+font-size:22px;
+font-weight:bold;
+margin-bottom:10px;
+}
+
+.code-box{
+background:#020617;
+padding:15px;
+border-radius:10px;
+margin-top:15px;
+font-family: monospace;
+overflow:auto;
+animation: fadeIn 0.6s ease;
+}
+
+.output-box{
+background:white;
+color:black;
+padding:15px;
+border-radius:10px;
+margin-top:15px;
+min-height:80px;
+animation: slideUp 0.6s ease;
+}
+
+button{
+margin-top:15px;
+padding:10px;
+border:none;
+background:#3b82f6;
+color:white;
+border-radius:8px;
+cursor:pointer;
+}
+
+.navigation{
+display:flex;
+justify-content:space-between;
+margin-top:25px;
+}
+
+.nav-btn{
+padding:10px 20px;
+background:#1e293b;
+border-radius:8px;
+}
+
+/* Animation */
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(10px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@keyframes slideUp{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="title">HTML Lists</div>
+
+<p>HTML lists are used to group items.</p>
+
+<div class="code-box">
+
+&lt;ul&gt;
+&lt;li&gt;Apple&lt;/li&gt;
+&lt;li&gt;Banana&lt;/li&gt;
+&lt;li&gt;Orange&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;br&gt;
+
+&lt;ol&gt;
+&lt;li&gt;First&lt;/li&gt;
+&lt;li&gt;Second&lt;/li&gt;
+&lt;li&gt;Third&lt;/li&gt;
+&lt;/ol&gt;
+
+</div>
+
+<button onclick="runCode()">Run Code</button>
+
+<div class="output-box" id="output">
+Output will appear here...
+</div>
+
+<!-- Navigation -->
+
+<div class="navigation">
+
+<button class="nav-btn" onclick="prevPage()">Prev</button>
+
+<button class="nav-btn" onclick="nextPage()">Next</button>
+
+</div>
+
+</div>
+
+<script>
+
+function runCode(){
+
+const output = document.getElementById("output");
+
+output.innerHTML = `
+
+<ul>
+<li>Apple</li>
+<li>Banana</li>
+<li>Orange</li>
+</ul>
+
+<ol>
+<li>First</li>
+<li>Second</li>
+<li>Third</li>
+</ol>
+
+`;
+
+output.style.animation = "none";
+output.offsetHeight;
+output.style.animation = "slideUp 0.6s ease";
+
+}
+
+function prevPage(){
+
+window.location.href = "Images.html";
+
+}
+
+function nextPage(){
+
+window.location.href = "Buttons.html";
+
+}
+
+</script>
+
+</body>
+</html>
