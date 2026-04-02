@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>HTML Semantic Tags</title>
+
+<style>
+
+body{
+font-family: Arial, sans-serif;
+background:#f5f7fa;
+margin:0;
+padding:0;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+}
+
+.container{
+background:white;
+width:90%;
+max-width:800px;
+padding:25px;
+border-radius:12px;
+box-shadow:0 4px 15px rgba(0,0,0,0.08);
+animation:fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+h1{
+text-align:center;
+}
+
+.code-box{
+background:#1e1e1e;
+color:#fff;
+padding:15px;
+border-radius:8px;
+overflow:auto;
+margin:15px 0;
+}
+
+.output-box{
+border:2px solid #eee;
+padding:15px;
+border-radius:8px;
+margin-top:10px;
+}
+
+header{
+background:#4CAF50;
+color:white;
+padding:10px;
+text-align:center;
+border-radius:6px;
+}
+
+nav{
+background:#333;
+color:white;
+padding:8px;
+margin-top:5px;
+border-radius:6px;
+}
+
+section{
+background:#f1f1f1;
+padding:10px;
+margin-top:10px;
+border-radius:6px;
+}
+
+article{
+background:white;
+padding:10px;
+margin-top:5px;
+border-radius:6px;
+}
+
+footer{
+background:#222;
+color:white;
+padding:10px;
+margin-top:10px;
+text-align:center;
+border-radius:6px;
+}
+
+.buttons{
+display:flex;
+justify-content:space-between;
+margin-top:20px;
+}
+
+button{
+padding:10px 20px;
+border:none;
+border-radius:8px;
+background:#4CAF50;
+color:white;
+cursor:pointer;
+}
+
+button:hover{
+background:#45a049;
+}
+
+@media(max-width:350px){
+
+.container{
+padding:15px;
+}
+
+button{
+font-size:14px;
+padding:8px 12px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Semantic HTML</h1>
+
+<p>Semantic tags help structure your website properly.</p>
+
+<h3>Example Code</h3>
+
+<div class="code-box">
+&lt;header&gt;Header&lt;/header&gt;<br>
+&lt;nav&gt;Navigation&lt;/nav&gt;<br>
+&lt;section&gt;<br>
+&nbsp;&nbsp;&lt;article&gt;Content&lt;/article&gt;<br>
+&lt;/section&gt;<br>
+&lt;footer&gt;Footer&lt;/footer&gt;
+</div>
+
+<h3>Output</h3>
+
+<div class="output-box">
+
+<header>Header</header>
+
+<nav>Navigation</nav>
+
+<section>
+
+<article>
+This is article content
+</article>
+
+</section>
+
+<footer>Footer</footer>
+
+</div>
+
+<div class="buttons">
+
+<button onclick="location.href='Tables.html'">⬅ Previous</button>
+
+<button onclick="location.href='DivSpan.html'">Next ➡</button>
+
+</div>
+
+</div>
+
+</body>
+</html>
