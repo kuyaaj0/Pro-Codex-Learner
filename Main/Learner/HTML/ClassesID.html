@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTML Classes & ID</title>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background:#f5f7fa;
+  margin:0;
+  padding:0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:100vh;
+}
+
+.container {
+  background:white;
+  width:90%;
+  max-width:800px;
+  padding:25px;
+  border-radius:12px;
+  box-shadow:0 4px 15px rgba(0,0,0,0.08);
+  animation:fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity:0; transform:translateY(20px); }
+  to { opacity:1; transform:translateY(0); }
+}
+
+h1 { text-align:center; margin-bottom:10px; }
+
+.code-box {
+  background:#1e1e1e;
+  color:#fff;
+  padding:15px;
+  border-radius:8px;
+  overflow:auto;
+  margin:15px 0;
+}
+
+.output-box {
+  border:2px solid #eee;
+  padding:15px;
+  border-radius:8px;
+  margin-top:10px;
+}
+
+.box {
+  padding:10px;
+  margin-bottom:10px;
+  border-radius:6px;
+}
+
+.class-box {
+  background:#4CAF50;
+  color:white;
+}
+
+#unique-box {
+  background:#e91e63;
+  color:white;
+}
+
+.buttons {
+  display:flex;
+  justify-content:space-between;
+  margin-top:20px;
+}
+
+button {
+  padding:10px 20px;
+  border:none;
+  border-radius:8px;
+  background:#4CAF50;
+  color:white;
+  cursor:pointer;
+}
+
+button:hover { background:#45a049; }
+
+@media(max-width:350px){
+  .container { padding:15px; }
+  button { font-size:14px; padding:8px 12px; }
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<h1>HTML Classes & ID</h1>
+
+<p>Use <code>class</code> for multiple elements and <code>id</code> for a unique element.</p>
+
+<h3>Example Code</h3>
+<div class="code-box">
+&lt;div class="class-box"&gt;This is a class&lt;/div&gt;<br>
+&lt;div class="class-box"&gt;Another class&lt;/div&gt;<br>
+&lt;div id="unique-box"&gt;This is an ID&lt;/div&gt;
+</div>
+
+<h3>Output</h3>
+<div class="output-box">
+<div class="box class-box">This is a class</div>
+<div class="box class-box">Another class</div>
+<div class="box" id="unique-box">This is an ID</div>
+</div>
+
+<div class="buttons">
+<button onclick="location.href='DivSpan.html'">⬅ Previous</button>
+<button onclick="location.href='HTMLLayout.html'">Next ➡</button>
+</div>
+
+</div>
+</body>
+</html>
