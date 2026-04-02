@@ -3,188 +3,27 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Pro-Codex Learner Platform</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<title>ProCodex</title>
 
 <style>
 
 body {
-font-family: 'Inter', sans-serif;
-background: #f5f7fa;
 margin: 0;
-padding: 0;
-color: #333;
-}
-
-/* Header */
-
-.header {
-text-align: center;
-padding: 40px 20px;
-}
-
-.header h1 {
-margin: 0;
-font-size: 32px;
-font-weight: 600;
-}
-
-.header p {
-margin-top: 10px;
-color: #666;
-}
-
-/* Container */
-
-.main-container {
-display: flex;
-justify-content: center;
-align-items: center;
-padding: 40px;
-}
-
-/* Carousel */
-
-.carousel-container {
-position: relative;
-width: 900px;
-overflow: hidden;
-}
-
-/* Cards */
-
-.carousel {
-display: flex;
-transition: transform 0.5s ease;
-}
-
-.card {
-min-width: 100%;
-background: white;
-border-radius: 12px;
-box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-padding: 40px;
-text-align: center;
-}
-
-.card img {
-width: 120px;
-height: 120px;
-object-fit: contain;
-margin-bottom: 20px;
-}
-
-.card h2 {
-margin-bottom: 10px;
-}
-
-.card p {
-color: #666;
-margin-bottom: 20px;
-}
-
-/* Buttons */
-
-.learn-btn {
-padding: 12px 25px;
-background: #4a7cff;
+font-family: Arial, sans-serif;
+background: #0f172a;
 color: white;
-border: none;
-border-radius: 6px;
-cursor: pointer;
-font-weight: 500;
-transition: 0.2s ease;
-}
-
-.learn-btn:hover {
-background: #355edb;
-}
-
-/* Navigation Buttons */
-
-.nav-btn {
-position: absolute;
-top: 50%;
-transform: translateY(-50%);
-background: white;
-border: none;
-padding: 12px 16px;
-border-radius: 50%;
-cursor: pointer;
-box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-font-size: 18px;
-}
-
-.nav-btn:hover {
-background: #f0f0f0;
-}
-
-.left {
-left: -20px;
-}
-
-.right {
-right: -20px;
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Pro-Codex Learner Platform</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-<style>
-
-body {
-font-family: 'Inter', sans-serif;
-background: #f5f7fa;
-margin: 0;
-padding: 0;
-color: #333;
-}
-
-/* Header */
-
-.header {
-text-align: center;
-padding: 40px 20px;
-}
-
-.header h1 {
-margin: 0;
-font-size: 32px;
-font-weight: 600;
-}
-
-.header p {
-margin-top: 10px;
-color: #666;
-}
-
-/* Container */
-
-.main-container {
 display: flex;
 justify-content: center;
 align-items: center;
-padding: 40px 20px;
+height: 100vh;
 }
 
-/* Carousel */
-
-.carousel-container {
-position: relative;
+.container {
 width: 100%;
-max-width: 900px;
+max-width: 350px;
 overflow: hidden;
-margin: auto;
+position: relative;
 }
-
-/* Cards */
 
 .carousel {
 display: flex;
@@ -193,163 +32,82 @@ transition: transform 0.4s ease-in-out;
 
 .card {
 min-width: 100%;
-background: white;
-border-radius: 12px;
-box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-padding: 40px;
+box-sizing: border-box;
+padding: 20px;
 text-align: center;
 }
 
-.card img {
-width: 120px;
-height: 120px;
-object-fit: contain;
-margin-bottom: 20px;
-}
-
-.card h2 {
-margin-bottom: 10px;
-}
-
-.card p {
-color: #666;
-margin-bottom: 20px;
-}
-
-/* Learn Button */
-
-.learn-btn {
-padding: 12px 25px;
-background: #4a7cff;
-color: white;
+.card button {
+margin-top: 10px;
+padding: 10px 20px;
 border: none;
-border-radius: 6px;
+background: #3b82f6;
+color: white;
+border-radius: 8px;
 cursor: pointer;
-font-weight: 500;
-transition: 0.2s ease;
 }
-
-.learn-btn:hover {
-background: #355edb;
-}
-
-/* Navigation Buttons */
 
 .nav-btn {
 position: absolute;
 top: 50%;
 transform: translateY(-50%);
-background: white;
+background: rgba(0,0,0,0.5);
 border: none;
-padding: 10px 14px;
-border-radius: 50%;
+color: white;
+font-size: 20px;
+padding: 10px;
 cursor: pointer;
-box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-font-size: 18px;
 z-index: 10;
 }
 
-.nav-btn:hover {
-background: #f0f0f0;
+.prev {
+left: 0;
 }
 
-.left {
-left: 10px;
+.next {
+right: 0;
 }
 
-.right {
-right: 10px;
-}
+/* Mobile size specifically 350px */
+@media (max-width: 350px) {
 
-/* Mobile Responsive */
-
-@media (max-width: 480px) {
-
-.header h1 {
-font-size: 22px;
-}
-
-.main-container {
-padding: 20px 10px;
-}
-
-.card {
-padding: 25px 20px;
-}
-
-.card img {
-width: 90px;
-height: 90px;
-}
-
-.learn-btn {
-width: 100%;
-}
-
-.nav-btn {
-display: none;
+.container {
+max-width: 350px;
 }
 
 }
 
 </style>
-
 </head>
 
 <body>
 
-<div class="header">
-<h1>Pro-Codex Learner Platform</h1>
-<p>Choose a Programming Language to Start Learning</p>
-</div>
+<div class="container">
 
-<div class="main-container">
-
-<div class="carousel-container">
-
-<button class="nav-btn left" onclick="prev()">‹</button>
+<button class="nav-btn prev" onclick="prev()">❮</button>
+<button class="nav-btn next" onclick="next()">❯</button>
 
 <div class="carousel" id="carousel">
 
-<!-- HTML -->
-
 <div class="card">
-<img src="https://cdn-icons-png.flaticon.com/512/732/732212.png">
 <h2>HTML</h2>
-<p>Learn the structure of websites</p>
-<button class="learn-btn" onclick="goTo('Main/Learner/HTML/Introduction.html')">
-Start Learning
-</button>
+<p>Learn HTML Basics</p>
+<button onclick="goTo('html.html')">Open</button>
 </div>
 
-<!-- CSS -->
-
 <div class="card">
-<img src="https://cdn-icons-png.flaticon.com/512/732/732190.png">
 <h2>CSS</h2>
-<p>Design beautiful websites</p>
-<button class="learn-btn" onclick="goTo('Main/Learner/CSS/Introduction.html')">
-Start Learning
-</button>
+<p>Learn CSS Styling</p>
+<button onclick="goTo('css.html')">Open</button>
 </div>
-
-<!-- JavaScript -->
 
 <div class="card">
-<img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png">
 <h2>JavaScript</h2>
-<p>Add logic and interactivity</p>
-<button class="learn-btn" onclick="goTo('Main/Learner/JavaScript/Introduction.html')">
-Start Learning
-</button>
+<p>Learn JS Logic</p>
+<button onclick="goTo('js.html')">Open</button>
 </div>
 
 </div>
-
-<button class="nav-btn right" onclick="next()">›</button>
-
-</div>
-
 </div>
 
 <script>
@@ -363,18 +121,12 @@ carousel.style.transform = `translateX(-${index * 100}%)`;
 }
 
 function next() {
-index++;
-if(index >= total) {
-index = 0;
-}
+index = (index + 1) % total;
 update();
 }
 
 function prev() {
-index--;
-if(index < 0) {
-index = total - 1;
-}
+index = (index - 1 + total) % total;
 update();
 }
 
@@ -382,26 +134,34 @@ function goTo(page) {
 window.location.href = page;
 }
 
-/* Swipe Support */
+/* Swipe (Fixed - won't block clicks) */
 
 let startX = 0;
 let endX = 0;
+let isSwiping = false;
 
 carousel.addEventListener("touchstart", (e) => {
 startX = e.touches[0].clientX;
+isSwiping = false;
 });
 
 carousel.addEventListener("touchmove", (e) => {
 endX = e.touches[0].clientX;
+
+if(Math.abs(startX - endX) > 10){
+isSwiping = true;
+}
 });
 
 carousel.addEventListener("touchend", () => {
 
-if(startX - endX > 50) {
+if(!isSwiping) return;
+
+if(startX - endX > 50){
 next();
 }
 
-if(endX - startX > 50) {
+if(endX - startX > 50){
 prev();
 }
 
