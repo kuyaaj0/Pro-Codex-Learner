@@ -10,87 +10,26 @@
 
 body{
 font-family: Arial, sans-serif;
-background: #0f172a;
-color: white;
+background:#f5f7fa;
 margin:0;
-padding:20px;
+padding:0;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
 }
 
 .container{
-max-width:350px;
-margin:auto;
-}
-
-.title{
-font-size:22px;
-font-weight:bold;
-margin-bottom:10px;
-}
-
-.code-box{
-background:#020617;
-padding:15px;
-border-radius:10px;
-margin-top:15px;
-font-family: monospace;
-overflow:auto;
-animation: fadeIn 0.6s ease;
-}
-
-.output-box{
 background:white;
-color:black;
-padding:15px;
-border-radius:10px;
-margin-top:15px;
-min-height:100px;
-animation: slideUp 0.6s ease;
+width:90%;
+max-width:800px;
+padding:25px;
+border-radius:12px;
+box-shadow:0 4px 15px rgba(0,0,0,0.08);
+animation:fadeIn 0.6s ease;
 }
-
-button{
-margin-top:15px;
-padding:10px;
-border:none;
-background:#3b82f6;
-color:white;
-border-radius:8px;
-cursor:pointer;
-}
-
-.navigation{
-display:flex;
-justify-content:space-between;
-margin-top:25px;
-}
-
-.nav-btn{
-padding:10px 20px;
-background:#1e293b;
-border-radius:8px;
-}
-
-input{
-padding:8px;
-margin-top:5px;
-margin-bottom:10px;
-width:100%;
-box-sizing:border-box;
-}
-
-/* Animation */
 
 @keyframes fadeIn{
-from{
-opacity:0;
-transform:translateY(10px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
-}
-
-@keyframes slideUp{
 from{
 opacity:0;
 transform:translateY(20px);
@@ -101,6 +40,69 @@ transform:translateY(0);
 }
 }
 
+h1{
+text-align:center;
+margin-bottom:10px;
+}
+
+.code-box{
+background:#1e1e1e;
+color:#fff;
+padding:15px;
+border-radius:8px;
+overflow:auto;
+margin:15px 0;
+}
+
+.output-box{
+border:2px solid #eee;
+padding:15px;
+border-radius:8px;
+margin-top:10px;
+}
+
+input, select, textarea{
+width:100%;
+padding:10px;
+margin-top:8px;
+margin-bottom:15px;
+border-radius:6px;
+border:1px solid #ccc;
+}
+
+button{
+padding:10px 20px;
+border:none;
+border-radius:8px;
+background:#4CAF50;
+color:white;
+cursor:pointer;
+font-size:16px;
+}
+
+button:hover{
+background:#45a049;
+}
+
+.buttons{
+display:flex;
+justify-content:space-between;
+margin-top:20px;
+}
+
+@media(max-width:350px){
+
+.container{
+padding:15px;
+}
+
+button{
+font-size:14px;
+padding:8px 12px;
+}
+
+}
+
 </style>
 
 </head>
@@ -109,80 +111,61 @@ transform:translateY(0);
 
 <div class="container">
 
-<div class="title">HTML Forms</div>
+<h1>HTML Forms</h1>
 
-<p>Forms are used to collect user input.</p>
+<p>HTML forms are used to collect user input.</p>
+
+<h3>Example Code</h3>
 
 <div class="code-box">
+&lt;form&gt;<br>
+&lt;label&gt;Name&lt;/label&gt;<br>
+&lt;input type="text"&gt;<br><br>
 
-&lt;form&gt;
+&lt;label&gt;Email&lt;/label&gt;<br>
+&lt;input type="email"&gt;<br><br>
 
-&lt;label&gt;Name:&lt;/label&gt;
-&lt;input type="text"&gt;
-
-&lt;label&gt;Email:&lt;/label&gt;
-&lt;input type="email"&gt;
-
-&lt;button&gt;Submit&lt;/button&gt;
-
+&lt;button&gt;Submit&lt;/button&gt;<br>
 &lt;/form&gt;
-
 </div>
 
-<button onclick="runCode()">Run Code</button>
+<h3>Output</h3>
 
-<div class="output-box" id="output">
-Output will appear here...
-</div>
-
-<!-- Navigation -->
-
-<div class="navigation">
-
-<button class="nav-btn" onclick="prevPage()">Prev</button>
-<button class="nav-btn" onclick="nextPage()">Next</button>
-
-</div>
-
-</div>
-
-<script>
-
-function runCode(){
-
-const output = document.getElementById("output");
-
-output.innerHTML = `
+<div class="output-box">
 
 <form>
 
-<label>Name:</label>
+<label>Name</label>
 <input type="text" placeholder="Enter your name">
 
-<label>Email:</label>
+<label>Email</label>
 <input type="email" placeholder="Enter your email">
+
+<label>Message</label>
+<textarea placeholder="Write message"></textarea>
+
+<label>Choose Option</label>
+<select>
+<option>HTML</option>
+<option>CSS</option>
+<option>JavaScript</option>
+</select>
 
 <button type="submit">Submit</button>
 
 </form>
 
-`;
+</div>
 
-output.style.animation = "none";
-output.offsetHeight;
-output.style.animation = "slideUp 0.6s ease";
+<div class="buttons">
 
-}
+<button onclick="location.href='Buttons.html'">⬅ Previous</button>
 
-function prevPage(){
-window.location.href = "Buttons.html";
-}
+<button onclick="location.href='Tables.html'">Next ➡</button>
 
-function nextPage(){
-window.location.href = "Tables.html";
-}
+</div>
 
-</script>
+</div>
 
 </body>
 </html>
