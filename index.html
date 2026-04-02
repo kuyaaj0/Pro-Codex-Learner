@@ -37,6 +37,13 @@ padding: 20px;
 text-align: center;
 }
 
+.card img {
+width: 120px;
+height: 120px;
+object-fit: contain;
+margin-bottom: 15px;
+}
+
 .card button {
 margin-top: 10px;
 padding: 10px 20px;
@@ -75,6 +82,11 @@ right: 0;
 max-width: 350px;
 }
 
+.card img {
+width: 100px;
+height: 100px;
+}
+
 }
 
 </style>
@@ -90,18 +102,21 @@ max-width: 350px;
 <div class="carousel" id="carousel">
 
 <div class="card">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
 <h2>HTML</h2>
 <p>Learn HTML Basics</p>
 <button onclick="goTo('Main/Learner/HTML/Introduction.html')">Open</button>
 </div>
 
 <div class="card">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
 <h2>CSS</h2>
 <p>Learn CSS Styling</p>
 <button onclick="goTo('Main/Learner/CSS/Introduction.html')">Open</button>
 </div>
 
 <div class="card">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
 <h2>JavaScript</h2>
 <p>Learn JS Logic</p>
 <button onclick="goTo('Main/Learner/JS/Introduction.html')">Open</button>
