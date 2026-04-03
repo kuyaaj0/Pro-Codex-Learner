@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>HTML Best Practices</title>
+
+<style>
+
+body {
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+  color: white;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 350px;
+  margin: auto;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.description {
+  margin-bottom: 15px;
+}
+
+.code-box {
+  background: #020617;
+  padding: 15px;
+  border-radius: 10px;
+  font-family: monospace;
+  overflow: auto;
+}
+
+.output-box {
+  background: white;
+  color: black;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 15px;
+  min-height: 120px;
+}
+
+button {
+  margin-top: 15px;
+  padding: 10px;
+  border: none;
+  background: #3b82f6;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.nav-btn {
+  padding: 10px 20px;
+  background: #1e293b;
+  border-radius: 8px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="title">HTML Best Practices</div>
+
+<div class="description">
+Follow these best practices to write clean and professional HTML code.
+</div>
+
+<div class="code-box">
+&lt;!-- Use semantic tags --&gt;<br>
+&lt;header&gt;&lt;/header&gt;<br>
+&lt;main&gt;&lt;/main&gt;<br>
+&lt;footer&gt;&lt;/footer&gt;<br><br>
+
+&lt;!-- Use alt text --&gt;<br>
+&lt;img src="image.jpg" alt="Description"&gt;<br><br>
+
+&lt;!-- Use proper headings --&gt;<br>
+&lt;h1&gt;Title&lt;/h1&gt;<br>
+&lt;h2&gt;Subtitle&lt;/h2&gt;
+</div>
+
+<button onclick="runCode()">Run Code</button>
+
+<div class="output-box" id="output">
+Output will appear here...
+</div>
+
+<div class="navigation">
+<button class="nav-btn" onclick="prevPage()">Prev</button>
+<button class="nav-btn" onclick="nextPage()">Next</button>
+</div>
+
+</div>
+
+<script>
+
+function runCode() {
+const output = document.getElementById("output");
+
+output.innerHTML = `
+<h2>Best Practices</h2>
+<ul>
+<li>Use semantic HTML</li>
+<li>Use alt text for images</li>
+<li>Use proper headings</li>
+<li>Keep code clean</li>
+<li>Make responsive layout</li>
+</ul>
+`;
+}
+
+function prevPage() {
+window.location.href = "SEO.html";
+}
+
+function nextPage() {
+window.location.href = "MiniProject.html";
+}
+
+</script>
+
+</body>
+</html>
