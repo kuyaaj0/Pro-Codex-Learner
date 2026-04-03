@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>HTML SEO Basics</title>
+
+<meta name="description" content="Learn HTML SEO Basics">
+<meta name="keywords" content="HTML, SEO, Web Development">
+<meta name="author" content="Your Name">
+
+<style>
+
+body {
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+  color: white;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 350px;
+  margin: auto;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.description {
+  margin-bottom: 15px;
+}
+
+.code-box {
+  background: #020617;
+  padding: 15px;
+  border-radius: 10px;
+  font-family: monospace;
+  overflow: auto;
+}
+
+.output-box {
+  background: white;
+  color: black;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 15px;
+  min-height: 120px;
+}
+
+button {
+  margin-top: 15px;
+  padding: 10px;
+  border: none;
+  background: #3b82f6;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.nav-btn {
+  padding: 10px 20px;
+  background: #1e293b;
+  border-radius: 8px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="title">HTML SEO Basics</div>
+
+<div class="description">
+SEO helps your website appear on search engines like Google.
+Use meta tags, headings, and proper structure.
+</div>
+
+<div class="code-box">
+&lt;title&gt;My Website&lt;/title&gt;<br><br>
+
+&lt;meta name="description" content="My Website Description"&gt;<br>
+&lt;meta name="keywords" content="HTML, CSS, Website"&gt;<br><br>
+
+&lt;h1&gt;Main Title&lt;/h1&gt;<br>
+&lt;p&gt;Content here...&lt;/p&gt;
+</div>
+
+<button onclick="runCode()">Run Code</button>
+
+<div class="output-box" id="output">
+Output will appear here...
+</div>
+
+<div class="navigation">
+<button class="nav-btn" onclick="prevPage()">Prev</button>
+<button class="nav-btn" onclick="nextPage()">Next</button>
+</div>
+
+</div>
+
+<script>
+
+function runCode() {
+const output = document.getElementById("output");
+
+output.innerHTML = `
+<h1>Main Title</h1>
+<p>This structure helps SEO ranking</p>
+<ul>
+<li>Use title</li>
+<li>Use meta description</li>
+<li>Use headings properly</li>
+</ul>
+`;
+}
+
+function prevPage() {
+window.location.href = "Accessibility.html";
+}
+
+function nextPage() {
+window.location.href = "BestPractices.html";
+}
+
+</script>
+
+</body>
+  </html>
