@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Final Project</title>
+
+<style>
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+  color: white;
+}
+
+.header {
+  background: #020617;
+  padding: 15px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.container {
+  max-width: 350px;
+  margin: auto;
+  padding: 20px;
+}
+
+.card {
+  background: #1e293b;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  background: #3b82f6;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.nav-btn {
+  width: 48%;
+  background: #1e293b;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.footer {
+  text-align: center;
+  padding: 15px;
+  background: #020617;
+  margin-top: 20px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+HTML Learning Platform - Final Project
+</div>
+
+<div class="container">
+
+<div class="card">
+<h3>Portfolio Website</h3>
+<p>Apply your HTML knowledge to build a personal portfolio.</p>
+<button onclick="openLesson('PortfolioProject.html')">Start Project</button>
+</div>
+
+<div class="card">
+<h3>Documentation Website</h3>
+<p>Create a structured documentation site using HTML.</p>
+<button onclick="openLesson('DocumentationProject.html')">Start Project</button>
+</div>
+
+<div class="card">
+<h3>Landing Page</h3>
+<p>Design a responsive landing page for a product or service.</p>
+<button onclick="openLesson('LandingPageProject.html')">Start Project</button>
+</div>
+
+<!-- Navigation Buttons -->
+<div class="navigation">
+<button class="nav-btn" onclick="prevPage()">Prev</button>
+<button class="nav-btn" onclick="done()">Done</button>
+</div>
+
+</div>
+
+<div class="footer">
+Congratulations! You've reached the final project 🎉
+</div>
+
+<script>
+
+function openLesson(page) {
+    window.location.href = page;
+}
+
+function prevPage() {
+    // Return to last advanced lesson or course section
+    window.location.href = "MiniProject.html";
+}
+
+function done() {
+    // Return to lobby
+    window.location.href = "../../../index.html";
+}
+
+</script>
+
+</body>
+</html>
