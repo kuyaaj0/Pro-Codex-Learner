@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>HTML Meta Tags</title>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+  color: white;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 350px;
+  margin: auto;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.description {
+  margin-bottom: 15px;
+}
+
+.code-box {
+  background: #020617;
+  padding: 15px;
+  border-radius: 10px;
+  font-family: monospace;
+  overflow: auto;
+  animation: fadeIn 0.6s ease;
+}
+
+.output-box {
+  background: white;
+  color: black;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 15px;
+  min-height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: slideUp 0.6s ease;
+  flex-direction: column;
+}
+
+button {
+  margin-top: 15px;
+  padding: 10px;
+  border: none;
+  background: #3b82f6;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.nav-btn {
+  padding: 10px 20px;
+  background: #1e293b;
+  border-radius: 8px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="title">HTML Meta Tags</div>
+
+<div class="description">
+Meta tags provide information about your webpage.  
+They help with SEO, mobile responsiveness, and browser behavior.
+</div>
+
+<div class="code-box">
+&lt;meta charset="UTF-8"&gt;<br>
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;<br>
+&lt;meta name="description" content="HTML Tutorial"&gt;<br>
+&lt;meta name="keywords" content="HTML, CSS, JavaScript"&gt;<br>
+&lt;meta name="author" content="Your Name"&gt;
+</div>
+
+<button onclick="runCode()">Run Code</button>
+
+<div class="output-box" id="output">
+Output explanation will appear here...
+</div>
+
+<div class="navigation">
+<button class="nav-btn" onclick="prevPage()">Prev</button>
+<button class="nav-btn" onclick="nextPage()">Next</button>
+</div>
+
+</div>
+
+<script>
+
+function runCode() {
+const output = document.getElementById("output");
+
+output.innerHTML = `
+<p><b>charset</b> - Character encoding</p>
+<p><b>viewport</b> - Mobile responsive</p>
+<p><b>description</b> - SEO description</p>
+<p><b>keywords</b> - Search keywords</p>
+<p><b>author</b> - Website author</p>
+`;
+
+output.style.animation = "none";
+output.offsetHeight;
+output.style.animation = "slideUp 0.6s ease";
+}
+
+function prevPage() {
+window.location.href = "HTMLSymbols.html";
+}
+
+function nextPage() {
+window.location.href = "Favicon.html";
+}
+
+</script>
+
+</body>
+</html>
