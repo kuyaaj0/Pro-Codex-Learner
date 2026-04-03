@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mini Project</title>
+
+<style>
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #0f172a;
+  color: white;
+}
+
+.container {
+  max-width: 350px;
+  margin: auto;
+  padding: 20px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.card {
+  background: #1e293b;
+  padding: 15px;
+  margin-top: 15px;
+  border-radius: 10px;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  background: #3b82f6;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.nav-btn {
+  background: #1e293b;
+  padding: 10px 15px;
+  border-radius: 8px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="title">My Portfolio</div>
+
+<div class="card">
+<h3>About Me</h3>
+<p>Hello! I'm learning HTML and building my first website.</p>
+</div>
+
+<div class="card">
+<h3>My Skills</h3>
+<ul>
+<li>HTML</li>
+<li>CSS</li>
+<li>Responsive Design</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Contact</h3>
+<p>Email: example@email.com</p>
+<button onclick="showMessage()">Contact Me</button>
+</div>
+
+<div class="navigation">
+<button class="nav-btn" onclick="prevPage()">Prev</button>
+<button class="nav-btn" onclick="nextPage()">Next</button>
+</div>
+
+</div>
+
+<script>
+
+function showMessage() {
+alert("Thanks for contacting me!");
+}
+
+function prevPage() {
+window.location.href = "BestPractices.html";
+}
+
+function nextPage() {
+window.location.href = "FinalProject.html";
+}
+
+</script>
+
+</body>
+</html>
