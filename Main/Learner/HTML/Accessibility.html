@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>HTML Accessibility</title>
+
+<style>
+
+body {
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+  color: white;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 350px;
+  margin: auto;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.description {
+  margin-bottom: 15px;
+}
+
+.code-box {
+  background: #020617;
+  padding: 15px;
+  border-radius: 10px;
+  font-family: monospace;
+  overflow: auto;
+}
+
+.output-box {
+  background: white;
+  color: black;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 15px;
+  min-height: 120px;
+}
+
+button {
+  margin-top: 15px;
+  padding: 10px;
+  border: none;
+  background: #3b82f6;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.nav-btn {
+  padding: 10px 20px;
+  background: #1e293b;
+  border-radius: 8px;
+}
+
+.access-box {
+  border: 2px solid #3b82f6;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="title">HTML Accessibility</div>
+
+<div class="description">
+Accessibility makes your website usable for people with disabilities and screen readers.
+</div>
+
+<div class="code-box">
+&lt;img src="image.jpg" alt="Description"&gt;<br><br>
+
+&lt;button aria-label="Close"&gt;X&lt;/button&gt;<br><br>
+
+&lt;label for="name"&gt;Name:&lt;/label&gt;<br>
+&lt;input id="name" type="text"&gt;
+</div>
+
+<button onclick="runCode()">Run Code</button>
+
+<div class="output-box" id="output">
+Output will appear here...
+</div>
+
+<div class="navigation">
+<button class="nav-btn" onclick="prevPage()">Prev</button>
+<button class="nav-btn" onclick="nextPage()">Next</button>
+</div>
+
+</div>
+
+<script>
+
+function runCode() {
+const output = document.getElementById("output");
+
+output.innerHTML = `
+<div class="access-box">
+<img src="https://via.placeholder.com/100" alt="Example Image">
+<br><br>
+<button aria-label="Close">X</button>
+<br><br>
+<label for="name">Name:</label>
+<input id="name" type="text">
+</div>
+`;
+}
+
+function prevPage() {
+window.location.href = "ResponsiveHTML.html";
+}
+
+function nextPage() {
+window.location.href = "SEO.html";
+}
+
+</script>
+
+</body>
+</html>
